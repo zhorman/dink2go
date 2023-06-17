@@ -1,0 +1,22 @@
+.catalog {
+  padding: 50px 0 44px;
+  background-color: $lightest-grey;
+}
+
+.catalog__title {
+  margin: 0;
+  padding: 0 20px 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-primary;
+}
+
+.catalog__description {
+  margin: 0;
+  padding: 0 20px 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}

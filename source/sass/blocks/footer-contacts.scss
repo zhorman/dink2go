@@ -1,0 +1,32 @@
+.footer-contacts {
+  padding: 20px 0;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer-contacts__item {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 15px auto;
+  column-gap: 6px
+}
+
+.footer-contacts__title {
+  grid-column: 1 / -1;
+  font-weight: 700;
+  color: $base-primary;
+}
+
+.footer-contacts__address {
+  padding: 0 0 16px 0;
+  font-style: normal;
+}
+
+.footer-contacts__icon {
+  grid-column: 1 / 2;
+}

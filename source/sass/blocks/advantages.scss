@@ -1,0 +1,99 @@
+.advantages {
+  padding: 50px 20px 60px;
+}
+
+.advantages__title {
+  margin: 0;
+  padding: 0  0 4px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-primary;
+}
+
+.advantages__description {
+  margin: 0;
+  padding: 0 0 102px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.advantages__list {
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item-1 {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/img/feature-speed.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 52px;
+    height: 56px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.advantages__item-2 {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/img/feature-fit.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 52px;
+    height: 56px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.advantages__item-3 {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/img/feature-energy.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 52px;
+    height: 56px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.advantages__item-4 {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/img/feature-ecology.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 52px;
+    height: 56px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+

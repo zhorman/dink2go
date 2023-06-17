@@ -1,0 +1,28 @@
+.page {
+  height: 100%;
+  background-color: $lightest-grey;
+}
+
+.page__wrapper {
+  background-color: $base-white;
+}
+
+.page__body {
+  min-height: 100%;
+  width: 320px;
+  margin: auto;
+  text-align: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}

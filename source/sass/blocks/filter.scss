@@ -1,0 +1,219 @@
+.filter {
+  padding: 0 17px 36px 23px;
+}
+
+.filter__group {
+  margin: 0;
+  border: none;
+  text-align: left;
+}
+
+.filter__title {
+  padding: 0 0 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__list {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.filter__input-min {
+  padding: 8px 10px;
+  margin: 0 40px 0 0;
+  width: 118px;
+  text-align: center;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+}
+
+.filter__input-max {
+  padding: 8px 10px;
+  width: 118px;
+  text-align: center;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+}
+
+.filter__submit {
+  width: 280px;
+  padding: 8px;
+  margin: 0 0 20px 0;
+  background-color: $base-primary;
+  color: $base-white;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__reset {
+  width: 280px;
+  padding: 8px;
+  margin: 0 0 36px 0;
+  background-color: $base-white;
+  color: $base-primary;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.range-slider {
+  width: 280px;
+  margin: 1em 0;
+}
+
+.range-slider__track {
+  position: relative;
+  height: 2px;
+  background-color: $primary-lighter;
+}
+
+.range-slider__thumb {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $primary-lighter;
+  background: $base-white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.range-slider__thumb--start {
+  left: 0;
+  /* Демонстрационное значение */
+}
+
+.range-slider__thumb--end {
+  right: 0;
+  /* Демонстрационное значение */
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.control__input {
+  display: none;
+}
+
+.control__input:disabled ~ .control__indicator {
+  border-color: $light-grey;
+  cursor: not-allowed;
+}
+
+.control__input:disabled ~ .control__label {
+  color: $base-grey;
+  cursor: not-allowed;
+}
+
+.control__indicator {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.control__input:checked ~ .control__indicator {
+  background-color: $base-white;
+  border-color: $base-primary;
+}
+
+.control__input:checked ~ .control__indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: $base-primary;
+  border-radius: 50%;
+}
+
+.control__label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Стили для контейнера переключателя */
+/* Стили для контейнера переключателя */
+.toggle-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Скрытие оригинального чекбокса */
+.toggle-control input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Стили для фона переключателя */
+.toggle-control__slider {
+  position: relative;
+  display: block;
+  height: 24px;
+  width: 42px;
+  background-color: #ccc;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+/* Стили для положения переключателя */
+.toggle-control__slider:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: $base-white;
+  transition: transform 0.3s ease;
+}
+
+/* Стили для переключения в состояние "включено" */
+.toggle-control input[type="checkbox"]:checked + .toggle-control__slider {
+  background-color: $base-primary;
+}
+
+.toggle-control
+  input[type="checkbox"]:checked
+  + .toggle-control__slider:before {
+  transform: translateX(18px);
+}
+
+/* Стили для фона переключателя в состоянии "выключено" */
+.toggle-control input[type="checkbox"]:disabled + .toggle-control__slider {
+  background-color: $light-grey;
+  opacity: 0.6;
+}
+
+/* Стили для положения переключателя в состоянии "выключено" */
+.toggle-control input[type="checkbox"]:disabled ~ .toggle-control__label {
+  color: $base-grey;
+}
+
+/* Стили для названия пункта */
+.toggle-control__label {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 8px;
+}

@@ -1,0 +1,48 @@
+.card {
+  padding: 20px;
+  text-align: left;
+  background-color: $base-white;
+}
+
+.card__picture {
+  display: block;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0 0 4px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.card__description {
+  margin: 0;
+  padding: 0 0 16px 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__price-text {
+  padding: 0 45px 0 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__price-button {
+  width: 141px;
+  padding: 8px;
+  background-color: $base-primary;
+  border-radius: 4px;
+  color: $base-white;
+}
+
+.card__price-button-icon {
+  margin: 0 6px 0 0;
+  width: 20px;
+  height: 16px;
+}
+

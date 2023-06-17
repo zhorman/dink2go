@@ -1,0 +1,29 @@
+.main-nav {
+  background-color: $base-white;
+}
+
+.main-nav__list {
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav__user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav__user-link {
+  text-decoration: none;
+  color: $base-black;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: $base-black;
+}
+
+.main-nav__item {
+  padding: 20px 0 21px;
+  text-transform: uppercase;
+  border: 1px solid black;
+}

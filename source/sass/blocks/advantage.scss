@@ -1,0 +1,16 @@
+.advantage:not(:last-child) {
+  padding: 0 0 98px 0;
+}
+
+.advantage__title {
+  margin: 0;
+  padding: 0 0 4px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.advantage__description {
+  margin: 0;
+  line-height: 20px;
+}

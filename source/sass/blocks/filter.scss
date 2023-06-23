@@ -1,15 +1,36 @@
 .filter {
-  padding: 0 17px 36px 23px;
+  padding: 0 17px 40px 23px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 17px 44px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 213px);
+    grid-gap: 10px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 0;
+    width: 318px;
+  }
 }
 
 .filter__group {
   margin: 0;
+  padding: 0 0 30px;
   border: none;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .filter__title {
   padding: 0 0 20px 0;
+  margin: 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -22,21 +43,16 @@
   list-style: none;
 }
 
-.filter__input-min {
-  padding: 8px 10px;
-  margin: 0 40px 0 0;
-  width: 118px;
-  text-align: center;
-  border: 2px solid $primary-lighter;
-  border-radius: 4px;
-}
+.filter__button-wrap {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 4;
+    text-align: center;
+    margin: 0 0 0 15px;
+  }
 
-.filter__input-max {
-  padding: 8px 10px;
-  width: 118px;
-  text-align: center;
-  border: 2px solid $primary-lighter;
-  border-radius: 4px;
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .filter__submit {
@@ -48,87 +64,248 @@
   border-radius: 4px;
   font-size: 16px;
   line-height: 24px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 137px;
+    margin: 0 15px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
 }
 
 .filter__reset {
   width: 280px;
   padding: 8px;
-  margin: 0 0 36px 0;
   background-color: $base-white;
   color: $base-primary;
   border-radius: 4px;
   font-size: 16px;
   line-height: 24px;
+
+  &:hover,
+  &:focus {
+    color: $base-white;
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
 }
 
-.range-slider {
+.filter__range {
   width: 280px;
-  margin: 1em 0;
+  padding: 10px 0 2px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
 }
 
-.range-slider__track {
+.filter__range-track {
+  margin: 0 9px 37px 11px;
   position: relative;
   height: 2px;
-  background-color: $primary-lighter;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    width: 244px;
+    z-index: 2;
+    background-color: $primary-lighter;
+
+    @media (min-width: $tablet-width) {
+      width: 180px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 274px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: 0;
+    width: 250px;
+    z-index: 1;
+    background-color: $light-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 200px;
+      right: -100px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+    margin: 0 0 33px 11px;
+  }
 }
 
-.range-slider__thumb {
+.filter__range-thumb {
   position: absolute;
   top: 50%;
   width: 24px;
   height: 24px;
   border: 2px solid $primary-lighter;
-  background: $base-white;
+  background-color: $base-white;
   border-radius: 50%;
+  z-index: 3;
   transform: translate(-50%, -50%);
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
 }
 
-.range-slider__thumb--start {
+.filter__range-thumb--start {
   left: 0;
-  /* Демонстрационное значение */
 }
 
-.range-slider__thumb--end {
+.filter__range-thumb--end {
   right: 0;
-  /* Демонстрационное значение */
+
+  @media (min-width: $tablet-width) {
+    right: -11px;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: -100px;
+  }
 }
 
-.control {
+.filter__range-input {
+  padding: 9px 10px;
+  width: 118px;
+  text-align: center;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $lightest-grey;
+    border: 2px solid $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 7px 10px;
+  }
+}
+
+.filter__range-input--min {
+  margin: 0 40px 0 0;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 45px 0 0;
+  }
+}
+
+.filter__range-input--max {
+  margin: 0;
+}
+
+.filter__group-radio {
+  padding: 0 0 15px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.filter__radio,
+.filter__checkbox {
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
-.control__input {
+.filter__radio-input,
+.filter__checkbox-input {
   display: none;
 }
 
-.control__input:disabled ~ .control__indicator {
+.filter__radio-input:disabled ~ .filter__radio-indicator,
+.filter__checkbox-input:disabled ~ .filter__checkbox-slider {
   border-color: $light-grey;
   cursor: not-allowed;
 }
 
-.control__input:disabled ~ .control__label {
+.filter__radio-input:disabled ~ .filter__radio-label,
+.filter__checkbox-input:disabled ~ .filter__checkbox-label {
   color: $base-grey;
   cursor: not-allowed;
 }
 
-.control__indicator {
+.filter__radio-indicator,
+.filter__checkbox-slider {
   width: 24px;
   height: 24px;
-  border: 2px solid #ccc;
+  border: 2px solid $base-grey;
   border-radius: 50%;
   margin-right: 8px;
   position: relative;
 }
 
-.control__input:checked ~ .control__indicator {
+.filter__radio-input:checked ~ .filter__radio-indicator {
   background-color: $base-white;
   border-color: $base-primary;
 }
 
-.control__input:checked ~ .control__indicator::before {
+.filter__radio-input:checked ~ .filter__radio-indicator::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -140,48 +317,52 @@
   border-radius: 50%;
 }
 
-.control__label {
+.filter__radio-label,
+.filter__checkbox-label {
   font-size: 16px;
   line-height: 24px;
 }
 
-.filter__list {
-  list-style-type: none;
-  padding: 0;
+.filter__group-checkbox {
+  padding: 0 0 10px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
-/* Стили для контейнера переключателя */
-/* Стили для контейнера переключателя */
-.toggle-control {
+
+.filter__checkbox {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
 /* Скрытие оригинального чекбокса */
-.toggle-control input[type="checkbox"] {
+.filter__checkbox-input {
   opacity: 0;
   position: absolute;
   z-index: -1;
 }
 
 /* Стили для фона переключателя */
-.toggle-control__slider {
+.filter__checkbox-slider {
+  margin: 0;
   position: relative;
   display: block;
   height: 24px;
   width: 42px;
-  background-color: #ccc;
+  background-color: $base-grey;
   border-radius: 12px;
   transition: background-color 0.3s ease;
 }
 
 /* Стили для положения переключателя */
-.toggle-control__slider:before {
+.filter__checkbox-slider::before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 0;
+  left: 0;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -190,29 +371,33 @@
 }
 
 /* Стили для переключения в состояние "включено" */
-.toggle-control input[type="checkbox"]:checked + .toggle-control__slider {
+.filter__checkbox-input:checked + .filter__checkbox-slider {
   background-color: $base-primary;
+
+  border: 2px solid $primary-lighter;
 }
 
-.toggle-control
-  input[type="checkbox"]:checked
-  + .toggle-control__slider:before {
+.filter__checkbox-input:checked + .filter__checkbox-slider::before {
   transform: translateX(18px);
 }
 
 /* Стили для фона переключателя в состоянии "выключено" */
-.toggle-control input[type="checkbox"]:disabled + .toggle-control__slider {
+.filter__checkbox-input:disabled + .filter__checkbox-slider {
   background-color: $light-grey;
   opacity: 0.6;
 }
 
 /* Стили для положения переключателя в состоянии "выключено" */
-.toggle-control input[type="checkbox"]:disabled ~ .toggle-control__label {
+.filter__checkbox-input:disabled ~ .filter__checkbox-label {
   color: $base-grey;
 }
 
-/* Стили для названия пункта */
-.toggle-control__label {
+.filter__radio:hover .filter__radio-indicator,
+.filter__checkbox:hover .filter__checkbox-slider {
+  background-color: $primary-opacity;
+}
+
+.filter__checkbox-label {
   font-size: 16px;
   line-height: 24px;
   margin-left: 8px;

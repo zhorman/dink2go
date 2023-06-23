@@ -1,0 +1,11 @@
+.map {
+  width: 100%;
+}
+
+.map__img {
+  display: none;
+
+  &--nojs {
+    display: block;
+  }
+}

@@ -1,13 +1,21 @@
 .card {
-  padding: 20px;
+  padding: 36px 20px 20px;
   text-align: left;
   background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px;
+  }
 }
 
 .card__picture {
   display: block;
   margin: 0 0 24px 0;
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 26px 0;
+  }
 }
 
 .card__title {
@@ -16,6 +24,16 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 0 0 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 10px 0;
+  }
 }
 
 .card__description {
@@ -23,6 +41,10 @@
   padding: 0 0 16px 0;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 20px 0;
+  }
 }
 
 .card__price-text {
@@ -30,6 +52,16 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin: 0 43px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 61px 0 0;
+    padding: 0;
+  }
 }
 
 .card__price-button {
@@ -38,6 +70,20 @@
   background-color: $base-primary;
   border-radius: 4px;
   color: $base-white;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
 }
 
 .card__price-button-icon {
@@ -45,4 +91,3 @@
   width: 20px;
   height: 16px;
 }
-

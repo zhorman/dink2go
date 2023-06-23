@@ -1,0 +1,135 @@
+.main-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $mobile-width-only) and (max-width: $mobile-width-max) {
+  .main-header--nojs .main-header__toggle {
+    display: none;
+  }
+
+  .main-header--closed .main-header__nav {
+    display: none;
+  }
+
+  .main-header--closed .main-header__toggle-icon--close {
+    display: none;
+  }
+
+  .main-header--open .main-header__toggle-icon--burger {
+    display: none;
+  }
+}
+
+.main-header__toggle {
+  background-color: $base-white;
+  padding: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 12px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 20px;
+    margin: 0 47px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 40px;
+    margin: 0 138px 0 0;
+  }
+}
+
+.main-header__logo-text {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    width: 126px;
+  }
+}
+
+.main-header__nav {
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.main-header__user {
+  display: flex;
+  margin: 0 60px 0 0;
+}
+
+.main-header__user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    order: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.main-header__user-link {
+  text-decoration: none;
+  color: $base-black;
+  padding: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: $base-primary;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.main-header__user-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}

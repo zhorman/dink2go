@@ -1,6 +1,11 @@
 .advantage:not(:last-child) {
   padding: 0 0 98px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
+
 
 .advantage__title {
   margin: 0;
@@ -8,9 +13,22 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 10px 0;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .advantage__description {
   margin: 0;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    min-width: 267px;
+  }
 }

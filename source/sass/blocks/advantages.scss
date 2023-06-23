@@ -1,5 +1,15 @@
 .advantages {
   padding: 50px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0 85px;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 96px 40px 120px;
+    z-index: 1;
+  }
 }
 
 .advantages__title {
@@ -14,15 +24,41 @@
 
 .advantages__description {
   margin: 0;
-  padding: 0 0 102px 0;
+  padding: 0 0 90px;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 47px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 156px;
+  }
 }
 
 .advantages__list {
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 103px;
+    padding: 0 102px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    grid-gap: 30px;
+  }
 }
 
 .advantages__item-1 {
@@ -37,9 +73,19 @@
     width: 52px;
     height: 56px;
     position: absolute;
-    top: -60px;
+    top: -68px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 3px;
+      left: -47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -76px;
+      left: 160px;
+    }
   }
 }
 
@@ -55,9 +101,19 @@
     width: 52px;
     height: 56px;
     position: absolute;
-    top: -60px;
+    top: -68px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 3px;
+      left: -47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -76px;
+      left: 160px;
+    }
   }
 }
 
@@ -73,9 +129,19 @@
     width: 52px;
     height: 56px;
     position: absolute;
-    top: -60px;
+    top: -68px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 3px;
+      left: -47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -76px;
+      left: 160px;
+    }
   }
 }
 
@@ -91,9 +157,18 @@
     width: 52px;
     height: 56px;
     position: absolute;
-    top: -60px;
+    top: -68px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 3px;
+      left: -47px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -76px;
+      left: 160px;
+    }
   }
 }
-

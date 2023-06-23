@@ -1,3 +1,36 @@
 .social__list {
+  margin: 0;
   list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social__item {
+  padding: 10px;
+  color: $base-grey;
+  border-radius: 4px;
+
+  &:hover,
+  :focus {
+    background-color: $base-secondary;
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
 }

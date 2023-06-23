@@ -7,24 +7,52 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .footer-contacts__item {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 15px auto;
-  column-gap: 6px
+  column-gap: 6px;
+
+  &:hover,
+  :focus {
+    outline: none;
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .footer-contacts__title {
+  margin: 0;
+  padding: 10px 0 20px;
   grid-column: 1 / -1;
   font-weight: 700;
   color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .footer-contacts__address {
   padding: 0 0 16px 0;
   font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .footer-contacts__icon {

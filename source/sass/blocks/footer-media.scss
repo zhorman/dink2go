@@ -1,6 +1,14 @@
 .footer-media {
-  padding: 20px 0;
+  padding: 17px 0;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .footer-media__title {
@@ -22,6 +30,16 @@
 }
 
 .footer-media__item {
-  margin: 0 0 4px 0;
-  padding: 8px 0;
+  margin: 0;
+  padding: 20px 0 0;
+
+  &:hover,
+  :focus {
+    outline: none;
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }

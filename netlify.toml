@@ -1,4 +1,5 @@
 [build]
-command = "nvm install 16 && npm run build"
-publish = "build"
 node_version = "16"
+command = "npm run build"
+publish = "build"
+

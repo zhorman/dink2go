@@ -1,5 +1,4 @@
 [build]
-node_version = "16"
-command = "npm run build"
-publish = "build"
-
+  publish = "build"
+  command = "npm run build"
+  environment = { NODE_VERSION = "16" }
